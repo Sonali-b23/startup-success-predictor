@@ -1,87 +1,88 @@
-# 🚀 Startup Success Predictor
+# Startup Success Predictor
 
-An end-to-end Machine Learning project that predicts **startup success probability** and **future growth potential** using classification, regression, and explainable AI techniques.
-
----
-
-## 📌 Overview
-
-This project aims to solve a real-world business problem:
-
-> **Can we predict whether a startup will succeed based on its features?**
-
-Using a dataset from Kaggle, this system:
-
-* Classifies startups as **successful or failed**
-* Predicts **numeric growth indicators (e.g., funding/revenue proxy)**
-* Provides **feature importance insights** to explain predictions
+An end-to-end machine learning project designed to predict startup success probability and estimate growth potential using classification, regression, and explainable AI techniques.
 
 ---
 
-## 🎯 Objectives
+## Overview
 
-* Build a **classification model** to predict startup success
-* Build a **regression model** to estimate growth potential
-* Analyze key factors influencing startup outcomes
-* Provide **explainable AI insights** using SHAP
-* (Optional) Deploy an interactive web app using Streamlit
+This project addresses a real-world business problem:
 
----
+Can we predict whether a startup will succeed based on its characteristics?
 
-## 📊 Dataset
+Using a dataset from Kaggle, the system:
 
-* Source: Kaggle Startup Success Prediction Dataset
-* Contains information such as:
-
-  * Funding amount
-  * Funding rounds
-  * Industry/category
-  * Country/location
-  * Milestones
-  * Relationships
+* Classifies startups as successful or failed
+* Predicts a numerical growth indicator (such as funding or related proxy)
+* Provides interpretable insights into feature importance
 
 ---
 
-## ⚙️ Tech Stack
+## Objectives
 
-* **Python**
-* **Pandas, NumPy** → Data processing
-* **Matplotlib, Seaborn** → Visualization
-* **Scikit-learn** → ML models
-* **SHAP** → Explainability
-* **Streamlit** (optional) → Web app
+* Build a classification model to predict startup success
+* Build a regression model to estimate growth potential
+* Identify key factors influencing startup outcomes
+* Incorporate explainable AI techniques for model transparency
+* (Optional) Deploy an interactive web application
 
 ---
 
-## 🧠 Machine Learning Approach
+## Dataset
 
-### 🔹 Classification (Startup Success)
+Source: Kaggle – Startup Success Prediction Dataset
+
+The dataset includes features such as:
+
+* Funding amount
+* Funding rounds
+* Industry/category
+* Country/location
+* Milestones
+* Relationships
+
+---
+
+## Tech Stack
+
+* Python
+* Pandas, NumPy (data processing)
+* Matplotlib, Seaborn (visualization)
+* Scikit-learn (machine learning models)
+* SHAP (explainability)
+* Streamlit (optional deployment)
+
+---
+
+## Machine Learning Approach
+
+### Classification (Startup Success)
 
 * Logistic Regression (baseline)
-* Advanced models (Random Forest, XGBoost – planned)
+* Advanced models such as Random Forest and XGBoost (planned)
 
-### 🔹 Regression (Growth Prediction)
+### Regression (Growth Prediction)
 
 * Linear Regression (baseline)
-* Advanced models (planned)
+* Advanced regression models (planned)
 
 ---
 
-## 🔍 Key Features
+## Key Features
 
-* ✅ Data preprocessing and feature engineering
-* ✅ Exploratory Data Analysis (EDA)
-* ✅ Dual-model system (classification + regression)
-* ✅ Model evaluation (Accuracy, RMSE, etc.)
-* ✅ Feature importance analysis
-* 🔜 SHAP explainability (in progress)
-* 🔜 Streamlit deployment (planned)
+* Data preprocessing and feature engineering
+* Exploratory Data Analysis (EDA)
+* Dual-model system combining classification and regression
+* Model evaluation using appropriate metrics
+* Feature importance analysis
+* SHAP-based explainability (in progress)
+* Streamlit-based interface (planned)
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-```
+```text
 startup-success-predictor/
 │
 ├── data/
@@ -101,44 +102,33 @@ startup-success-predictor/
 
 ---
 
-## 📈 Expected Output
+## Expected Output
 
-The system will take startup features as input and return:
+Given startup-related inputs, the system will provide:
 
-* ✅ Success Probability (0–1)
-* 📊 Predicted Growth Metric
-* 🔍 Feature Importance Insights
-
----
-
-## 🚀 Future Improvements
-
-* Add SHAP visualizations for explainability
-* Handle class imbalance (SMOTE)
-* Hyperparameter tuning (GridSearchCV)
-* Compare multiple ML models
-* Deploy using Streamlit
+* Success probability (between 0 and 1)
+* Predicted growth metric
+* Feature importance insights explaining the prediction
 
 ---
 
-## 🧑‍💻 Author
+## Future Improvements
 
-**Sonali**
+* Integrate SHAP visualizations for detailed explainability
+* Address class imbalance using techniques such as SMOTE
+* Perform hyperparameter tuning (GridSearchCV)
+* Compare multiple machine learning models
+* Deploy the application using Streamlit
+
+---
+
+## Author
+
+Sonali
 Machine Learning Enthusiast
 
 ---
 
-## ⭐ Why This Project?
+## Project Status
 
-This project demonstrates:
-
-* End-to-end ML pipeline design
-* Real-world problem solving
-* Model interpretability (Explainable AI)
-* Clean and scalable project structure
-
----
-
-## 📌 Status
-
-🚧 Currently in development — actively building and improving step by step.
+This project is currently under development and will be enhanced with additional features and improvements.
