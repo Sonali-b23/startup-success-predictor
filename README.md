@@ -1,134 +1,175 @@
-# Startup Success Predictor
+# 🚀 Startup Success Predictor
 
-An end-to-end machine learning project designed to predict startup success probability and estimate growth potential using classification, regression, and explainable AI techniques.
-
----
-
-## Overview
-
-This project addresses a real-world business problem:
-
-Can we predict whether a startup will succeed based on its characteristics?
-
-Using a dataset from Kaggle, the system:
-
-* Classifies startups as successful or failed
-* Predicts a numerical growth indicator (such as funding or related proxy)
-* Provides interpretable insights into feature importance
+An end-to-end Machine Learning project that predicts whether a startup will succeed (acquired) or fail (closed), along with estimating its funding potential.
 
 ---
 
-## Objectives
+## 📌 Project Overview
 
-* Build a classification model to predict startup success
-* Build a regression model to estimate growth potential
-* Identify key factors influencing startup outcomes
-* Incorporate explainable AI techniques for model transparency
-* (Optional) Deploy an interactive web application
+This project follows a **complete 5-phase ML lifecycle**, transforming raw startup data into a deployable AI-powered web application.
 
----
+It combines:
 
-## Dataset
-
-Source: Kaggle – Startup Success Prediction Dataset
-
-The dataset includes features such as:
-
-* Funding amount
-* Funding rounds
-* Industry/category
-* Country/location
-* Milestones
-* Relationships
+* Data Analysis 📊
+* Feature Engineering ⚙️
+* Machine Learning 🤖
+* Explainable AI 🔍
+* Web Deployment 🌐
 
 ---
 
-## Tech Stack
+## 🧠 Problem Statement
 
-* Python
-* Pandas, NumPy (data processing)
-* Matplotlib, Seaborn (visualization)
-* Scikit-learn (machine learning models)
-* SHAP (explainability)
-* Streamlit (optional deployment)
+Can we predict:
+
+1. Whether a startup will succeed or fail?
+2. How much funding it is likely to raise?
 
 ---
 
-## Machine Learning Approach
+## ⚙️ Tech Stack
 
-### Classification (Startup Success)
-
-* Logistic Regression (baseline)
-* Advanced models such as Random Forest and XGBoost (planned)
-
-### Regression (Growth Prediction)
-
-* Linear Regression (baseline)
-* Advanced regression models (planned)
+* **Python**
+* **Pandas, NumPy**
+* **Scikit-learn**
+* **SHAP (Explainable AI)**
+* **Streamlit (Web App)**
 
 ---
 
-## Key Features
+## 🗂️ Project Structure
 
-* Data preprocessing and feature engineering
-* Exploratory Data Analysis (EDA)
-* Dual-model system combining classification and regression
-* Model evaluation using appropriate metrics
-* Feature importance analysis
-* SHAP-based explainability (in progress)
-* Streamlit-based interface (planned)
-
----
-
-## Project Structure
-
-```text
+```
 startup-success-predictor/
 │
 ├── data/
 │   └── Data.csv
 │
 ├── notebooks/
-│   └── EDA.ipynb
+│   └── eda_runner.py
 │
 ├── src/
 │   ├── preprocessing.py
 │   ├── train.py
 │   ├── predict.py
+│   └── evaluate.py
 │
-├── README.md
+├── outputs/
+│   └── shap_summary.png
+│
+├── app.py
+├── runner.py
 ├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## Expected Output
+## 🔄 Project Phases
 
-Given startup-related inputs, the system will provide:
+### ✅ Phase 1: Exploratory Data Analysis (EDA)
 
-* Success probability (between 0 and 1)
-* Predicted growth metric
-* Feature importance insights explaining the prediction
+* Dataset understanding (923 rows, 49 features)
+* Identified data leakage (`labels`)
+* Found key success indicators:
 
----
-
-## Future Improvements
-
-* Integrate SHAP visualizations for detailed explainability
-* Address class imbalance using techniques such as SMOTE
-* Perform hyperparameter tuning (GridSearchCV)
-* Compare multiple machine learning models
-* Deploy the application using Streamlit
+  * Relationships
+  * Milestones
 
 ---
 
-## Author
+### ✅ Phase 2: Data Preprocessing
 
-Sonali
-Machine Learning Enthusiast
+* Dropped useless & leaking columns
+* Handled missing values (median/mode)
+* Encoded categorical variables
+* Feature scaling applied
 
 ---
 
-## Project Status
+### ✅ Phase 3: Model Training
 
-This project is currently under development and will be enhanced with additional features and improvements.
+* **RandomForestClassifier**
+
+  * Accuracy: **72.4%**
+* **RandomForestRegressor**
+
+  * MAE: **~$11.7M**
+
+---
+
+### ✅ Phase 4: Model Explainability (SHAP)
+
+* Feature importance using SHAP
+* Generated:
+
+  * `shap_summary.png`
+* Removed black-box behavior
+
+---
+
+### ✅ Phase 5: Web Deployment (Streamlit)
+
+* Interactive UI using Streamlit
+* Real-time predictions:
+
+  * Success Probability (%)
+  * Estimated Funding ($)
+* SHAP waterfall visualization inside app
+
+---
+
+## ▶️ How to Run the Project
+
+### 1. Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### 2. Run training pipeline
+
+```
+python runner.py
+```
+
+### 3. Launch web app
+
+```
+streamlit run app.py
+```
+
+---
+
+## 📊 Sample Output
+
+* ✅ Success Probability
+* 💰 Funding Prediction
+* 📉 SHAP Explanation Graph
+
+---
+
+## 📸 Screenshots
+
+![Streamlit App Screenshot](screenshot.png)
+
+---
+
+## 🌟 Key Highlights
+
+* End-to-end ML pipeline
+* Real-world dataset handling
+* Explainable AI integration
+* Deployable web application
+
+---
+
+## 👩‍💻 Author
+
+**Sonali**
+
+---
+
+## ⭐ If you like this project
+
+Give it a star on GitHub ⭐
