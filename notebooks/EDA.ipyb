@@ -1,9 +1,0 @@
-import pandas as pd
-
-# Load dataset
-df = pd.read_csv("../data/Data.csv")
-
-# Basic inspection
-print(df.head())
-print(df.info())
-print(df.describe())
