@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.preprocessing import LabelEncoder  # StandardScaler not used: RandomForest is tree-based and scale-invariant
 from sklearn.impute import SimpleImputer
 
 def load_data(path):
